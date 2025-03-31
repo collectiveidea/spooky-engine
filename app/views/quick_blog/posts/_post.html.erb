@@ -1,0 +1,8 @@
+<article>
+  <h1><%= post.title %></h1>
+  <p><%= post.published_at %></p>
+  <% post.authors.each do |author| %>
+    <p>by <%= author %></p>
+  <% end %>
+  <p><%= post.body %></p>
+</article>
