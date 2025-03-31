@@ -1,0 +1,4 @@
+<h1>Manage Posts</h1>
+<%= link_to 'New Post', new_manage_post_path %>
+
+<%= render partial: "quick_blog/manage/posts/post", collection: @posts %>
