@@ -8,6 +8,7 @@
   <%= yield :head %>
 
   <%= stylesheet_link_tag    "quick_blog/application", media: "all" %>
+  <%= auto_discovery_link_tag :atom, atom_path %>
 </head>
 <body>
 
