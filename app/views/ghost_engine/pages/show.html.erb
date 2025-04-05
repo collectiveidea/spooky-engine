@@ -1,0 +1,10 @@
+<article>
+  <% if @page.feature_image.present? %>
+    <figure>
+      <%= image_tag @page.feature_image, alt: @page.feature_image_alt %>
+      <%= content_tag :figcaption, @page.feature_image_caption if @page.feature_image_caption.present? %>
+    </figure>
+  <% end %>   
+  <h1><%= @page.title %></h1>
+  <p><%= @page.html.html_safe %></p>
+</article>

@@ -1,12 +1,17 @@
 module GhostEngine
   class PostsController < ApplicationController
     def index
-      @posts = Post.order(published_at: :desc).page(params[:page]).per(10)
+      @posts, @pagination = ghost.posts(include: "authors,tags")
 
       respond_to do |format|
         format.html
         format.atom
       end
+    end
+  
+    def show
+      @post = ghost.post_by(slug: params[:id])
+      render_404 unless @post
     end
   end
 end
