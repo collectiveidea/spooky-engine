@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in quick_blog.gemspec.
+# Specify your gem's dependencies in ghost_engine.gemspec.
 gemspec
 
 gem "puma"

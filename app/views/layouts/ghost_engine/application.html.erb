@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quick blog</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= yield :head %>
+
+  <%= stylesheet_link_tag    "ghost_engine/application", media: "all" %>
+  <%= auto_discovery_link_tag :atom, atom_path %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

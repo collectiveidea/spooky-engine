@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount QuickBlog::Engine => "/quick_blog"
+  mount GhostEngine::Engine => "/ghost_engine"
 end

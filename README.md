@@ -1,4 +1,4 @@
-# QuickBlog
+# GhostEngine
 Short description and motivation.
 
 ## Usage
@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "quick_blog"
+gem "ghost_engine"
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install quick_blog
+$ gem install ghost_engine
 ```
 
 ## Contributing

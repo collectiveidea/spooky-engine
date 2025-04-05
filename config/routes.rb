@@ -1,4 +1,4 @@
-QuickBlog::Engine.routes.draw do
+GhostEngine::Engine.routes.draw do
   namespace :manage do
     resources :posts
   end
