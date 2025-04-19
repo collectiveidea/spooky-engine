@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
+config = Rails.application.config.ghost_engine
+
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom", "xml:lang" => "en-us" do
-  xml.title "FIXME: BLOG TITLE"
+  xml.title config.title
+  xml.subtitle config.subtitle if config.subtitle
+  xml.icon image_url(config.icon) if config.icon
+  xml.logo image_url(config.logo) if config.logo
+  xml.rights config.rights if config.rights
+  xml.generator "GhostEngine #{GhostEngine::VERSION}", uri: ""
   xml.link href: root_url, rel: "alternate"
   xml.link href: atom_url, type: "application/atom+xml", rel: "self"
 
