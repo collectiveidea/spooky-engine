@@ -2,7 +2,7 @@
   <%= image_tag @author.cover_image if @author.cover_image.present? %>
   <%= image_tag @author.profile_image if @author.profile_image.present? %>
   <h1><%= @author.name %></h1>
-  <p><%= @page.bio %></p>
-  <p><%= @page.website %></p>
-  <p><%= @page.location %></p>
+  <p><%= @author.bio %></p>
+  <p><%= @author.website %></p>
+  <p><%= @author.location %></p>
 </div>

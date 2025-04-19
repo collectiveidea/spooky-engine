@@ -5,8 +5,8 @@ module Spooky
     end
 
     def show
-      @page = ghost.tag_by(slug: params[:id])
-      render_404 unless @page
+      @tag = ghost.tag_by(slug: params[:id])
+      render_404 unless @tag
     end
   end
 end

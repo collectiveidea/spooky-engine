@@ -5,8 +5,8 @@ module Spooky
     end
 
     def show
-      @page = ghost.author_by(slug: params[:id])
-      render_404 unless @page
+      @author = ghost.author_by(slug: params[:id])
+      render_404 unless @author
     end
   end
 end
