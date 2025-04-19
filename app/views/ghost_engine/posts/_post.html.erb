@@ -1,8 +1,10 @@
 <article>
-  <h1><%= post.title %></h1>
+  <%= image_tag post.feature_image if post.feature_image.present? %>
+  <h1><%= link_to_unless_current post.title, post_path(post.slug) %></h1>
   <p><%= post.published_at %></p>
   <% post.authors.each do |author| %>
     <p>by <%= author %></p>
   <% end %>
-  <p><%= post.body %></p>
+  <p><%= post.html.html_safe %></p>
 </article>
+

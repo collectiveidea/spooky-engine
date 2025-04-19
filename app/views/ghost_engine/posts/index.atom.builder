@@ -11,16 +11,16 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom", "xml:lang" => "en-us" do
 
   @posts.each do |post|
     xml.entry do
-      xml.title     post.title
-      xml.link      href: post_url(post.slug), type: "text/html", rel: "alternate"
+      xml.id post_url(post.slug)
+      xml.title post.title
+      xml.link href: post_url(post.slug), type: "text/html", rel: "alternate"
       xml.published post.created_at.strftime("%Y-%m-%dT%H:%M:%SZ")
-      xml.updated   post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ")
-      xml.id        post_url(post)
+      xml.updated post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ")
       post.authors.each do |author|
         xml.author do
           xml.name author
           # xml.uri  author_url(author)
-          xml.email author.email if author.respond_to?(:email) && author.email.present?
+          # xml.email author.email if author.respond_to?(:email) && author.email.present?
         end
       end
 
