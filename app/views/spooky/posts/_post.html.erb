@@ -3,7 +3,12 @@
   <h1><%= link_to_unless_current post.title, post_path(post.slug) %></h1>
   <p><%= post.published_at %></p>
   <% post.authors.each do |author| %>
-    <p>by <%= author %></p>
+    <p>by <%= link_to author.name, author_path(author) %></p>
+  <% end %>
+  <% if post.tags.any? %>
+    <% post.tags.each do |tag| %>
+      <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
   <% end %>
   <p><%= post.html.html_safe %></p>
 </article>

@@ -21,24 +21,25 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom", "xml:lang" => "en-us" do
       xml.id post_url(post.slug)
       xml.title post.title
       xml.link href: post_url(post.slug), type: "text/html", rel: "alternate"
-      xml.published post.created_at.strftime("%Y-%m-%dT%H:%M:%SZ")
+      xml.published post.published_at.strftime("%Y-%m-%dT%H:%M:%SZ")
       xml.updated post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ")
       post.authors.each do |author|
         xml.author do
           xml.name author
-          # xml.uri  author_url(author)
-          # xml.email author.email if author.respond_to?(:email) && author.email.present?
+          xml.uri  author_url(author)
         end
       end
 
-      # post.categories.each do |category|
-      #   xml.category term: category.name, scheme: category_url(category)
-      # end
+      post.tags.each do |tag|
+        xml.category term: tag.name, scheme: tag_url(tag)
+      end
 
-      # xml.summary(type: "html", "xml:lang": "en") do
-      #   xml.cdata!(post.body.to_s.truncate(200))
-      # end
+      xml.summary(type: "text", "xml:lang": "en") do
+        xml.cdata!(post.excerpt.to_s)
+      end
 
+      # TODO make lang configurable or remove?
+      # Could get from settings endpoint
       xml.content(type: "html", "xml:lang": "en") do
         xml.cdata!(post.html.to_s)
       end
