@@ -1,8 +1,8 @@
-require_relative "lib/spooky_engine/version"
+# require_relative "lib/spooky/engine/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "spooky_engine"
-  spec.version = SpookyEngine::VERSION
+  spec.name = "spooky-engine"
+  spec.version = "1.0.0"
   spec.authors = ["Daniel Morrison"]
   spec.email = ["daniel@collectiveidea.com"]
   spec.homepage = "https://github.com/collectiveidea/spooky_engine"
@@ -19,5 +19,5 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 8.0.1"
-  # spec.add_dependency "spooky"
+  spec.add_dependency "spooky"
 end

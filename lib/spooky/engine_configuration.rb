@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module SpookyEngine
-  class Configuration
+module Spooky
+  class EngineConfiguration
     # Title used in Atom feed. Defaults to "#{Rails.application.name.titleize} Blog"
-    attr_accessor :title
+    attr_writer :title
 
     # Optional values used in Atom feed. Defaults to nil
     attr_accessor :subtitle
@@ -11,8 +11,8 @@ module SpookyEngine
     attr_accessor :logo
     attr_accessor :rights
 
-    def initialize
-      @title = "#{Rails.application.name.titleize} Blog"
+    def title
+      self.title = "#{Rails.application.name.titleize} Blog"
     end
   end
 end

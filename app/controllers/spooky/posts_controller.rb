@@ -1,4 +1,4 @@
-module SpookyEngine
+module Spooky
   class PostsController < ApplicationController
     def index
       @posts, @pagination = ghost.posts(include: "authors,tags")
