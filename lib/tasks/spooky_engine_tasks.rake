@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :ghost_engine do
+# task :spooky_engine do
 #   # Task goes here
 # end

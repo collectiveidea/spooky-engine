@@ -1,6 +1,6 @@
-module GhostEngine
+module SpookyEngine
   module Manage
-    class PostsController < GhostEngine::ApplicationController
+    class PostsController < SpookyEngine::ApplicationController
       def index
         @posts = Post.order(published_at: :desc).page(params[:page]).per(10)
       end

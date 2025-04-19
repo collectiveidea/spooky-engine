@@ -1,4 +1,4 @@
-module GhostEngine
+module SpookyEngine
   class ApplicationController < ActionController::Base
     private
 

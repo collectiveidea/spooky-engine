@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in ghost_engine.gemspec.
+# Specify your gem's dependencies in spooky_engine.gemspec.
 gemspec
 
 gem "puma"

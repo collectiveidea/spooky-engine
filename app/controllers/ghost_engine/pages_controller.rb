@@ -1,9 +1,9 @@
-module GhostEngine
+module SpookyEngine
   class PagesController < ApplicationController
     def index
       @pages, @pagination = ghost.posts(include: "authors,tags")
     end
-  
+
     def show
       @page = ghost.page_by(slug: params[:id])
       render_404 unless @page

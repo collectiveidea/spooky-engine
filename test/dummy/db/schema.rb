@@ -11,22 +11,22 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 2025_03_30_122648) do
-  create_table "ghost_engine_post_authors", force: :cascade do |t|
+  create_table "spooky_engine_post_authors", force: :cascade do |t|
     t.string "author_type", null: false
     t.integer "author_id", null: false
     t.integer "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_type", "author_id"], name: "index_ghost_engine_post_authors_on_author"
-    t.index ["post_id"], name: "index_ghost_engine_post_authors_on_post_id"
+    t.index ["author_type", "author_id"], name: "index_spooky_engine_post_authors_on_author"
+    t.index ["post_id"], name: "index_spooky_engine_post_authors_on_post_id"
   end
 
-  create_table "ghost_engine_posts", force: :cascade do |t|
+  create_table "spooky_engine_posts", force: :cascade do |t|
     t.string "title"
     t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "ghost_engine_post_authors", "posts"
+  add_foreign_key "spooky_engine_post_authors", "posts"
 end

@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount GhostEngine::Engine => "/ghost_engine"
+  mount SpookyEngine::Engine => "/spooky_engine"
 end

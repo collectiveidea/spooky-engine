@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module GhostEngine
+module SpookyEngine
   class Configuration
     # Title used in Atom feed. Defaults to "#{Rails.application.name.titleize} Blog"
     attr_accessor :title

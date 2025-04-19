@@ -1,4 +1,4 @@
-module GhostEngine
+module SpookyEngine
   module ApplicationHelper
     # Borrowed from rails_admin to get around an annoying issue with
     # ActiveStorage::VariantWithRecord and ActionText

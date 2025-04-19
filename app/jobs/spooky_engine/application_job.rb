@@ -1,4 +1,4 @@
-module GhostEngine
+module SpookyEngine
   class ApplicationJob < ActiveJob::Base
   end
 end
