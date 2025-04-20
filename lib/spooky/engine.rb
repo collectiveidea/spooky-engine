@@ -8,8 +8,6 @@ loader.setup
 
 module Spooky
   class Engine < ::Rails::Engine
-    VERSION = "0.1.0"
-    # isolate_namespace Spooky
     engine_name "spooky-engine"
 
     config.spooky_engine = Spooky::EngineConfiguration.new
