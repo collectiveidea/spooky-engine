@@ -1,7 +1,7 @@
 module Spooky
   class PagesController < ApplicationController
     def index
-      @pages, @pagination = ghost.posts(include: "authors,tags")
+      @pages, @pagination = ghost.pages(include: "authors,tags")
     end
 
     def show
