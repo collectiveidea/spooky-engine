@@ -9,7 +9,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom", "xml:lang" => "en-us" do
   xml.icon image_url(config.icon) if config.icon
   xml.logo image_url(config.logo) if config.logo
   xml.rights config.rights if config.rights
-  xml.generator "SpookyEngine #{SpookyEngine::VERSION}", uri: ""
+  xml.generator "SpookyEngine #{Spooky::Engine::VERSION}", uri: ""
   xml.link href: root_url, rel: "alternate"
   xml.link href: atom_url, type: "application/atom+xml", rel: "self"
 

@@ -14,5 +14,9 @@ module Spooky
     def title
       self.title = "#{Rails.application.name.titleize} Blog"
     end
+
+    def config
+      yield self if block_given?
+    end
   end
 end
