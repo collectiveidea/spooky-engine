@@ -73,6 +73,16 @@ end
 
 Routes exist for Posts, Pages, Authors and Tags. We use `slug` instead everywhere, so you get nice URLs, like `/pages/about`.
 
+## Webhooks
+
+Receive Ghost's webhooks easily. Point them at `/blog/webhooks` (assuming you mounted the engine at `/blog`) and then you can subscribe via ActiveSupport::Notifications: 
+
+```ruby
+ActiveSupport::Notifications.subscribe('webhook.spooky') do |event|
+  event.payload # webhook body
+end
+```
+
 ## Version support
 This was built expecting Rails 8+. It probalby works with older versions but hasn't been tested. Fork it, try it, and PRs welcome!
 
