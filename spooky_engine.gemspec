@@ -19,5 +19,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 8.0.1"
-  spec.add_dependency "spooky"
+  # Spooky is required, but there isn't a published gem version that works (yet). 
+  # See README for details.
+  # spec.add_dependency "spooky"
 end

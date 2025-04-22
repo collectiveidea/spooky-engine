@@ -11,3 +11,5 @@ gem "propshaft"
 
 gem "standard", require: false
 gem "standard-rails", require: false
+
+gem "spooky", git: "https://github.com/collectiveidea/spooky", branch: "active_model" 
