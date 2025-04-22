@@ -1,7 +1,14 @@
 module Spooky
   class PagesController < ApplicationController
     def index
-      @pages, @pagination = ghost.pages(include: "authors,tags")
+      @pages, @pagination = ghost.pages(
+        include: "authors,tags",
+        filter: "visibility:public",
+        page: params[:page].presence,
+        limit: params[:limit].presence
+      )
+
+      render_404 unless @pages
     end
 
     def show

@@ -3,10 +3,12 @@
 <ul>
   <% @tags.each do |tag| %>
     <li>
-      <%= link_to tag_path(tag) do %>
+      <%= link_to spooky_engine.tag_path(tag) do %>
         <%= tag.name %>
         (<%= tag.count.posts %>)
       <% end %>
     </li>
   <% end %>
 </ul>
+
+<%= render "spooky/shared/pagination" %>

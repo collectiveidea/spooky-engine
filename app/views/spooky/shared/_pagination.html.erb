@@ -1,0 +1,7 @@
+<% if @pagination["pages"] > 1 %>
+  <div class="spooky-pagination">
+    Page <%= @pagination["page"] %> of <%= @pagination["pages"] %><p>
+    <%= link_to "Previous", spooky_pagination_path(page: @pagination["prev"]) if @pagination["prev"].present? %>
+    <%= link_to "Next", spooky_pagination_path(page: @pagination["next"]) if @pagination["next"].present? %>
+  </div>
+<% end %>

@@ -1,7 +1,14 @@
 module Spooky
   class TagsController < ApplicationController
     def index
-      @tags, @pagination = ghost.tags(include: "count.posts", filter: "visibility:public")
+      @tags, @pagination = ghost.tags(
+        include: "count.posts",
+        filter: "visibility:public",
+        page: params[:page].presence,
+        limit: params[:limit].presence
+      )
+
+      render_404 unless @tags
     end
 
     def show
